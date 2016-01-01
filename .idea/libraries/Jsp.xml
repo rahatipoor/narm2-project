@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Jsp">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/library/Jsp" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/library/Jsp" recursive="false" />
+  </library>
+</component>

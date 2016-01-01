@@ -1,0 +1,75 @@
+body {
+  padding: 0px;
+  background-color: #eaeaea;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.header:before {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  content: "";
+  height: 56px;
+  right: -2%;
+  width: 104%;
+  will-change: top, right;
+}
+
+.header {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  height: 56px;
+  background: #4285f4;
+  z-index: 22;
+  border-bottom: 1px solid #A2A2A2;
+}
+
+.header-img {
+  width: 100%;
+}
+
+.menu-btn {
+  border: none;
+  background-color: rgba(130, 130, 130, 0.43);
+}
+
+.menu-btn:hover {
+  background-color: rgba(130, 130, 130, 0.8);
+
+}
+
+.menu-btn.selected {
+  background-color: rgba(101, 101, 101, 0.75);
+  color: white;
+}
+
+.record {
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  margin-bottom: 4px;
+  height: 45px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #bbb;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.record.recheader{
+  height: 45px;
+  background: none;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(14, 14, 14, 0.25);
+  font-size: 17px;
+  padding-top: 18px
+}
+.input-help{
+  font-weight: bold;
+  pointer-events: all;
+  background: none;
+  border: none;
+}
+.open>.dropdown-menu {
+  display: block;
+  float: left;
+
+  right: auto;
+  left: 0;
+  text-align: right;
+  padding: 5px 10px;
+}
