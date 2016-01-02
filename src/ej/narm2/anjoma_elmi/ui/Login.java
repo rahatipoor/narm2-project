@@ -1,6 +1,7 @@
 package ej.narm2.anjoma_elmi.ui;
 
 import ej.narm2.anjoma_elmi.Db_ui;
+import ej.narm2.anjoma_elmi.common.User;
 import ej.narm2.anjoma_elmi.ui.enums.Attribute;
 import ej.narm2.anjoma_elmi.ui.enums.Mycookie;
 import ej.narm2.anjoma_elmi.ui.tools.URLHelper;
@@ -26,19 +27,23 @@ run(request,response);
     }
 
     private void run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-String user=request.getParameter("user");//get username
+String username=request.getParameter("user");//get username
 String pass=request.getParameter("pass");//get password
         String error=null;
 
-if (user!=null ){
+if (username!=null ){
     try {
         //send user and pass for login
-        String token= Db_ui.getuser(user, pass);//TODO login
-        URLHelper.setcookie(response, Mycookie.lg,token);
+        User user= Db_ui.getuser(username, pass);//TODO login
+        URLHelper.setcookie(response, Mycookie.lg,user.getToken());
+        URLHelper.setAttribute(request,Attribute.USER,user);
+        request.getRequestDispatcher("/").forward(request, response);
 
     }catch (Exception e){
         error="نام کاربری یا گذروازه اشتباه است";
     }
+}else {
+
 }
 
         URLHelper.setAttribute(request, Attribute.Error, error);

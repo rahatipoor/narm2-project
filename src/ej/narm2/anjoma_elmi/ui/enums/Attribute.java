@@ -3,10 +3,11 @@ package ej.narm2.anjoma_elmi.ui.enums;
 
 public enum Attribute {
     // -----------------------  REQUEST ATTRIBUTE
-    SUGGESTION("suggestion"),
 
 
-    Error("error");//#############################################
+    Error("error"),
+    MENU("menu"),
+    USER("user"), CRQS("crqs");//#############################################
     private String value;
 
     Attribute(String value) {

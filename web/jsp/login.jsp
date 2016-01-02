@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/WEB-INF/taglibs.jsp" %>
-<c:set var="error" value="${pageContext.request.getParameter('error')}"/>
 
 <!DOCTYPE html>
 <html>
@@ -47,18 +46,18 @@ box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);">
 
                             <div class="row" style="    padding: 5px  15px;">
 
-                                <form>
+                                <form method="POST" action="/login">
                                     <c:if test=" ${!empty error}">
                                     <div class="alert alert-danger" role="alert" style="    margin: 0px;
     margin-bottom: 10px;"><c:out value="error"></c:out></div>
                                     </c:if>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">نام کاربری</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" >
+                                        <label for="exampleInputEmail1" >نام کاربری</label>
+                                        <input name="user" type="text" class="form-control" id="exampleInputEmail1" >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">گذروازه</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" >
+                                        <label for="exampleInputPassword1" >گذروازه</label>
+                                        <input name="pass" type="password" class="form-control" id="exampleInputPassword1" >
                                     </div>
 
 
