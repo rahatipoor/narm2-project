@@ -3,6 +3,7 @@ package ej.narm2.anjoma_elmi.ui;
 import ej.narm2.anjoma_elmi.Db_ui;
 import ej.narm2.anjoma_elmi.common.Crequest;
 import ej.narm2.anjoma_elmi.common.User;
+import ej.narm2.anjoma_elmi.common.enums.User_type;
 import ej.narm2.anjoma_elmi.ui.enums.Attribute;
 import ej.narm2.anjoma_elmi.ui.enums.Mycookie;
 import ej.narm2.anjoma_elmi.ui.tools.StringHelper;
@@ -41,6 +42,7 @@ run(request, response);
 String token= URLHelper.getCookie(request, Mycookie.lg);
         if (request.getAttribute("user")==null) {
             user= Db_ui.getuser(token);
+            URLHelper.setAttribute(request,Attribute.USER,user);
         }else {
             user= (User) URLHelper.getAttribute(request,Attribute.USER);
         }
@@ -70,11 +72,10 @@ String token= URLHelper.getCookie(request, Mycookie.lg);
             }
             Crequest[] crqs=Db_ui.getrequests(user,rq);
             URLHelper.setAttribute(request, Attribute.CRQS, crqs);
-
+            System.out.println(user.type==User_type.NORMAL);
 
 
             request.getRequestDispatcher("jsp/index.jsp").forward(request, response);
-
 
 
         }

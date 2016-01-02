@@ -1,6 +1,7 @@
 package ej.narm2.anjoma_elmi;
 
 import ej.narm2.anjoma_elmi.common.Crequest;
+import ej.narm2.anjoma_elmi.common.Crq;
 import ej.narm2.anjoma_elmi.common.User;
 import ej.narm2.anjoma_elmi.common.enums.Crequest_type;
 import ej.narm2.anjoma_elmi.common.enums.User_type;
@@ -9,6 +10,7 @@ import ej.narm2.anjoma_elmi.common.enums.User_type;
  * Created by rahati on 1/1/16.
  */
 public class Db_ui {
+
     //login user
 
     // return :
@@ -25,7 +27,7 @@ public class Db_ui {
     //invalid user : null
     public static User getuser(String token) {
         if("a235".equals(token))
-        return new User("محمد","rahatipoor","123","a235", User_type.NORMAL);
+        return new User("محمد","rahatipoor","123","a235", User_type.SECRETARY);
         else {
             return null;
         }
@@ -36,5 +38,18 @@ public class Db_ui {
       public static Crequest[] getrequests(User user, String rq) {
 
         return new Crequest[] {new Crequest(Crequest_type.PROPSE,"سلام","2.10")};
+    }
+// return current date
+    public static String getcurrentdaye() {
+        return "";
+    }
+//get request details
+    public static Crq getCrq(Crequest_type ordoo, int rq_id, User user) {
+
+        return new Crq(Crequest_type.ORDOO,"a",123,"elmi","12/2/94","elias","0930","23/8/96","25/4/97","ali","fajr",12,true,true,"123","256");
+
+    }
+//set request(crq)
+    public static void setCrq(Crq crq, User user) {
     }
 }
