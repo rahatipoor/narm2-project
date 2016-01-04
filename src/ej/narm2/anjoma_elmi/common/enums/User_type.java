@@ -8,27 +8,45 @@ public enum User_type {
             {"events","رویداد ها"},
             {"signs", "ثبت نام شده"},
             {"archive","بایگانی"}
-    }),
+    },"mormal"),
     SECRETARY(new String[][]{
             {"waiting","در انتظار"},
             {"working","در گردش"},
             {"archive","آرشیو"},
             {"proposes","پیشنهاد ها"}
-    }),
-    DIRECTOR(new String[][]{
+    },"secretary"),
+    farhangi_DIRECTOR(new String[][]{
             {"waiting","در انتظار"},
             {"archive","آرشیو"}
-    });
+    },"farhangi_director"),
+    salon_DIRECTOR(new String[][]{
+        {"waiting","در انتظار"},
+        {"archive","آرشیو"}
+    },"salon_director"),
+    anbar_DIRECTOR(new String[][]{
+        {"waiting","در انتظار"},
+        {"archive","آرشیو"}
+    },"anbar_director"),
+    vehicle_DIRECTOR(new String[][]{
+        {"waiting","در انتظار"},
+        {"archive","آرشیو"}
+    },"vehicle_director");
 
 
     private String[][] menu;
+    private  String name;
 
 
-    User_type(String[][] menu) {
+    User_type(String[][] menu, String name) {
         this.menu = menu;
+        this.name = name;
     }
 
     public String[][] getMenu() {
         return menu;
+    }
+
+    public String getName() {
+        return name;
     }
 }

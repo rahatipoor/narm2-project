@@ -7,7 +7,6 @@ import ej.narm2.anjoma_elmi.common.enums.Crequest_type;
  * Created by rahati on 1/2/16.
  */
 public class Crq extends Crequest{
-    int rq_id;
     String rq_type2;
     String rq_applicant;
     String rq_responsible;
@@ -21,13 +20,12 @@ public class Crq extends Crequest{
     boolean rq_vehicles;
     String rq_moveـlocation;
     String rq_comments;
-    public Crq(Crequest_type type, String title, String date) {
-        super(type, title, date);
+
         
-    }
+
 
     public Crq(Crequest_type type, String title, int rq_id, String rq_type2, String rq_applicant, String rq_responsible, String rq_responsible_mobile, String rq_begin_date, String rq_end_date, String rq_Videographers, String rq_place, int rq_count_participants, boolean rq_reception, boolean rq_vehicles, String rq_moveـlocation, String rq_comments) {
-        super(type, title, Db_ui.getcurrentdaye());
+        super(type, title, Db_ui.getcurrentdaye(),rq_id);
         this.rq_id = rq_id;
         this.rq_type2 = rq_type2;
         this.rq_applicant = rq_applicant;

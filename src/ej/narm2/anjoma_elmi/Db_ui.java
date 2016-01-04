@@ -37,7 +37,7 @@ public class Db_ui {
     // rq is a string in User_type enum > menu like events,signs and ...
       public static Crequest[] getrequests(User user, String rq) {
 
-        return new Crequest[] {new Crequest(Crequest_type.PROPSE,"سلام","2.10")};
+        return new Crequest[] {new Crequest(Crequest_type.HAMAYESH,"سلام","2.10",123)};
     }
 // return current date
     public static String getcurrentdaye() {
@@ -46,7 +46,7 @@ public class Db_ui {
 //get request details
     public static Crq getCrq(Crequest_type ordoo, int rq_id, User user) {
 
-        return new Crq(Crequest_type.ORDOO,"a",123,"elmi","12/2/94","elias","0930","23/8/96","25/4/97","ali","fajr",12,true,true,"123","256");
+        return new Crq(Crequest_type.ORDOO,"a",123,"علمی","12/2/94","elias","0930","23/8/96","25/4/97","ali","fajr",12,true,true,"123","256");
 
     }
 //set request(crq)

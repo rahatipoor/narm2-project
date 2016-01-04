@@ -125,7 +125,7 @@ ${user.name}                </a>
                     
 
 
-                    <a data-toggle="modal" data-target="#myModal" style="cursor: pointer;color: #474747">
+                    <a data-toggle="modal" data-target="#myModal" style="cursor: pointer;color: #474747" onclick='openrq( "${rq.type.enname}", "${user.type.name}",${rq.rq_id})'>
 
                         <div class="row record" style="">
                             <div class="col-xs-12"
@@ -404,6 +404,24 @@ switch(s){
 }
 
         }
+    function openrq(rqtype,usertype,id) {
+        var url = "/rq_get?type=" + rqtype + "&id=" + id;
+        $.ajax({
+            url: url,
+            dataType: 'application/json',
+            complete: function(data){
+                alert(data+"dd");// S1000
+
+            },
+            success: function(data){
+                alert(data)
+            }
+        })
+
+    }
+
+
+
     </script>
     <style>
          .modal {

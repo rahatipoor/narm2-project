@@ -33,9 +33,10 @@ public class rq_get extends HttpServlet {
     }
 
     private void run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("1");
         User user;
         PrintWriter out = response.getWriter(  );
-        response.setContentType("text/html");
+        response.setContentType("application/json");
 
         String token= URLHelper.getCookie(request, Mycookie.lg);
         if (request.getAttribute("user")==null) {
@@ -52,11 +53,13 @@ Crq crq;
             String rq_type = null;
             int rq_id = 0;
             try {
-               rq_type = request.getParameter("rq_type");
-                 rq_id = Integer.parseInt(request.getParameter("rq_id"));
+               rq_type = request.getParameter("type");
+                 rq_id = Integer.parseInt(request.getParameter("id"));
             }catch(Exception e){
             }
             Crequest_type type;
+            System.out.println("2");
+
             if (rq_type!=null) {
                 switch (rq_type) {
                     case "ordoo":
@@ -65,9 +68,15 @@ Crq crq;
                     case "hamayesh":
                         type = Crequest_type.HAMAYESH;
                         break;
+                    case "propose":
+                        type = Crequest_type.PROPSE;
+                        break;
                     default:
                         type = null;
+                        System.out.println(rq_type);
+
                         break;
+
                 }
                 if (type != null) {
                     crq = Db_ui.getCrq(type, rq_id, user);
@@ -90,7 +99,7 @@ Crq crq;
                                         ",    \"rq_vehicles\":\"" + crq.getRq_vehicles() + "\"" +
                                         ",    \"rq_move_location\":\"" + crq.getRq_moveـlocation() + "\"" +
                                         ",    \"rq_comments\":\"" + crq.getRq_comments() + "\"" +
-                                        "},\n");
+                                        "}");
                     }
 
 //
