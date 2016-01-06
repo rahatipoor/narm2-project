@@ -29,6 +29,12 @@ public class Crequest {
         this.date = date;
         this.title = title;
     }
+    public Crequest( Crequest_type type, String title, String date ) {
+
+        this.type = type;
+        this.date = date;
+        this.title = title;
+    }
 
     public int getRq_id() {
         return rq_id;

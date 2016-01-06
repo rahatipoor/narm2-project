@@ -46,7 +46,7 @@ public class Db_ui {
 //get request details
     public static Crq getCrq(Crequest_type ordoo, int rq_id, User user) {
 
-        return new Crq(Crequest_type.ORDOO,"a",123,"علمی","12/2/94","elias","0930","23/8/96","25/4/97","ali","fajr",12,true,true,"123","256");
+        return new Crq(Crequest_type.ORDOO,"عنوان",123,"نوع","درخواست ..","مسئول","0930","2016-12-31T22:59","2017-01-01T23:01","فیلم بردارali","fajr",12,true,true,"123","256");
 
     }
 //set request(crq)

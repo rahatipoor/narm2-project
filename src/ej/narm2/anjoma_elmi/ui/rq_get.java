@@ -99,6 +99,7 @@ Crq crq;
                                         ",    \"rq_vehicles\":\"" + crq.getRq_vehicles() + "\"" +
                                         ",    \"rq_move_location\":\"" + crq.getRq_moveـlocation() + "\"" +
                                         ",    \"rq_comments\":\"" + crq.getRq_comments() + "\"" +
+                                        ",    \"user_type\":\"" + user.getType().getName() + "\"" +
                                         "}");
                     }
 

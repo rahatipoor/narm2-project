@@ -72,6 +72,7 @@ String token= URLHelper.getCookie(request, Mycookie.lg);
             }
             Crequest[] crqs=Db_ui.getrequests(user,rq);
             URLHelper.setAttribute(request, Attribute.CRQS, crqs);
+            URLHelper.setAttribute(request, Attribute.cmenu, rq);
 
 
             request.getRequestDispatcher("jsp/index.jsp").forward(request, response);

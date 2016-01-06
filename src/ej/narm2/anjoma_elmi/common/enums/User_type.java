@@ -8,9 +8,9 @@ public enum User_type {
             {"events","رویداد ها"},
             {"signs", "ثبت نام شده"},
             {"archive","بایگانی"}
-    },"mormal"),
+    },"normal"),
     SECRETARY(new String[][]{
-            {"waiting","در انتظار"},
+//            {"waiting","در انتظار"},
             {"working","در گردش"},
             {"archive","آرشیو"},
             {"proposes","پیشنهاد ها"}

@@ -7,7 +7,8 @@ public enum Attribute {
 
     Error("error"),
     MENU("menu"),
-    USER("user"), CRQS("crqs");//#############################################
+    USER("user"), CRQS("crqs"),
+    cmenu("cmenu");//#############################################
     private String value;
 
     Attribute(String value) {

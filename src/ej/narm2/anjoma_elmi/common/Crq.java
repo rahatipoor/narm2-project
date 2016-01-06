@@ -41,7 +41,23 @@ public class Crq extends Crequest{
         this.rq_moveـlocation = rq_moveـlocation;
         this.rq_comments = rq_comments;
     }
-
+    public Crq(Crequest_type type, String title, String rq_type2, String rq_applicant, String rq_responsible, String rq_responsible_mobile, String rq_begin_date, String rq_end_date, String rq_Videographers, String rq_place, int rq_count_participants, boolean rq_reception, boolean rq_vehicles, String rq_moveـlocation, String rq_comments) {
+        super(type, title, Db_ui.getcurrentdaye());
+//        this.rq_id = rq_id;
+        this.rq_type2 = rq_type2;
+        this.rq_applicant = rq_applicant;
+        this.rq_responsible = rq_responsible;
+        this.rq_responsible_mobile = rq_responsible_mobile;
+        this.rq_begin_date = rq_begin_date;
+        this.rq_end_date = rq_end_date;
+        this.rq_Videographers = rq_Videographers;
+        this.rq_place = rq_place;
+        this.rq_count_participants = rq_count_participants;
+        this.rq_reception = rq_reception;
+        this.rq_vehicles = rq_vehicles;
+        this.rq_moveـlocation = rq_moveـlocation;
+        this.rq_comments = rq_comments;
+    }
     public int getRq_id() {
         return rq_id;
     }
